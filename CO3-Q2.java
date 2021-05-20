@@ -1,7 +1,7 @@
 package myproject;
 import java.util.Scanner;
 
-public class employeee {
+class employeee {
 
 	int empid;
 	String name;
@@ -54,7 +54,7 @@ public class teacher extends employeee {
 			ar[i]=new teacher (e1,n1,s1,a1,d1,sub1);
 			System.out.println("Details are");
 			for(int j=0;j<n;j++) {
-				ar[i].display();
+				ar[j].display();
 			}
 			
 		}
