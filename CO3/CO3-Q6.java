@@ -1,4 +1,4 @@
-package myproject;
+package myprojects;
 import java.util.Scanner;
 
 interface calculate {
@@ -35,10 +35,12 @@ class rectangle extends circle {
 		b=sc.nextInt();
 	}
 	public void area() {
+		super.area();
 		ar=l*b;
 		System.out.println("Area of rectangle is "+ar);
 	}
 	public void perimeter() {
+		super.perimeter();
 		peri=2*l*b;
 		System.out.println("Perimeter of rectangle is "+peri);
 	}
@@ -55,3 +57,5 @@ public class interface1 {
 	}
 
 }
+
+
