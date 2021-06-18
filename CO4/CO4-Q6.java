@@ -2,12 +2,12 @@ package myprojects;
 
 import java.util.Scanner;
 
-class thread1 implements Runnable{
+class firstthread implements Runnable{
 	
 	
 	public void run() {
-		System.out.println("\n....Fibonacci Series of limit 20....");
-		int n =20;
+		int n=50;
+		System.out.println("Fibonacci Series ");Scanner sc = new Scanner(System.in);
 		int n1=0,n2=1,n3,i;
 		 System.out.print(n1+" "+n2);   
 		    
@@ -23,16 +23,16 @@ class thread1 implements Runnable{
 	
 	
 }
- class thread2 implements Runnable{
+ class secondthread implements Runnable{
 	
 	public void run() {
 		
-		System.out.println("\n....Even numbers...."); 
+		System.out.println("Even numbers"); 
 		int number;
 		Scanner sc = new Scanner(System.in);
-		System.out.print("\n\n Please Enter any Number : ");
+		System.out.print("Enter the limit : ");
 		number = sc.nextInt();	
-		System.out.print("List of even numbers from 1 to "+number+": ");  
+		System.out.print("Even Numbers Are : ");  
 		for (int i=1; i<=number; i++)   
 		{  
 		
@@ -45,14 +45,14 @@ class thread1 implements Runnable{
 	}
 	
 }
-public class Multithread2 {
+public class multi {
 
 	public static void main(String[] args)throws InterruptedException {
-				 thread1 d1 = new thread1();
-		Thread a = new Thread(d1);
-		thread2 d2 = new thread2();
-		Thread b = new Thread(d2);
-		System.out.println("......Multithreading Using Runnable Interface.......");
+		firstthread t1 = new firstthread();
+		Thread a = new Thread(t1);
+		secondthread t2 = new secondthread();
+		Thread b = new Thread(t2);
+		System.out.println("Multithreading Using Runnable Interface");
 		a.start();
 		a.sleep(200);
 		b.start();
